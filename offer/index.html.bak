@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <link rel="stylesheet" href="css/css.css">
+  <title>Document</title>
+ </head>
+ <body>
+
+<div id="Con">
+
+	<!--头像开始-->
+	<div id="light">
+		<dl>
+			<dt>
+				<img src="images/my.jpg"/>
+			</dt>
+			<dd>个人简历</dd>
+		</dl>
+	</div>
+
+	<!--列表展示内容区开始-->
+	<div class="List">
+		<ul id="biglist">
+			<li>
+				<!--bq begin-->
+				<div class="bq">
+					<font>个人信息</font>
+					<span></span>
+					
+				</div>
+				<!--bq end-->
+				
+				<!--内容开始-->
+				<div class="ListCon">
+					<canvas id="canvas">您的浏览器不支持canvas绘图，请您更换浏览器!</canvas>
+				<ul>
+					<li>姓名:金明</li>
+					<li>户籍地</li>
+					<li>出生年月</li>
+					<li>学历</li>
+					<li>移动电话</li>
+					<li>电子邮件</li>
+					<li>现居住地</li>
+				</ul>
+				</div>
+				<!--内容结束-->
+			</li>
+			<li>
+				<!--bq begin-->
+				<div class="bq">
+					<font>求职意向</font>
+					<span></span>
+				</div>
+				<!--bq end-->
+
+				<!--内容开始-->
+				<div class="ListCon">
+				</div>
+				<!--内容结束-->
+			</li>
+			<li>
+				<!--bq begin-->
+				<div class="bq">
+					<font>自我评价</font>
+					<span></span>
+				</div>
+				<!--bq end-->
+
+				<!--内容开始-->
+				<div class="ListCon">
+				</div>
+				<!--内容结束-->
+			</li>
+			<li>
+				<!--bq begin-->
+				<div class="bq">
+					<font>专业技能</font>
+					<span></span>
+				</div>
+				<!--bq end-->
+
+				<!--内容开始-->
+				<div class="ListCon">
+				</div>
+				<!--内容结束-->
+			</li>
+			<li>
+				<!--bq begin-->
+				<div class="bq">
+					<font>项目经历</font>
+					<span></span>
+				</div>
+				<!--bq end-->
+
+				<!--内容开始-->
+				<div class="ListCon">
+				</div>
+				<!--内容结束-->
+			</li>
+			<li>
+				<!--bq begin-->
+				<div class="bq">
+					<font>教育经历</font>
+					<span></span>
+				</div>
+				<!--bq end-->
+
+				<!--内容开始-->
+				<div class="ListCon">
+				</div>
+				<!--内容结束-->
+			</li>
+			<li>
+				<!--bq begin-->
+				<div class="bq">
+					<font>在校实践经历</font>
+					<span></span>
+				</div>
+				<!--bq end-->
+
+				<!--内容开始-->
+				<div class="ListCon">
+				</div>
+				<!--内容结束-->
+			</li>
+			<li>
+				<!--bq begin-->
+				<div class="bq">
+					<font>荣誉奖项</font>
+					<span></span>
+				</div>
+				<!--bq end-->
+
+				<!--内容开始-->
+				<div class="ListCon">
+				</div>
+				<!--内容结束-->
+			</li>
+			
+			
+		</ul>
+	</div>
+	<!--列表展示内容区结束-->
+</div>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/canvasbc.js"></script>
+<script type="text/javascript">
+	$(".List ul li:lt(3)").show();
+
+	$(window).scroll(function(){
+		var _top=$(this).scrollTop()//+$(window).height()-200;
+		
+		$(".List ul li").each(function(){
+			var _index=$(this).index()+3;
+			var _height=$(this).offset().top;//获li与浏览器窗口顶部距离
+			console.log(_height);
+			if(_top<_height){
+				$(".List ul li:lt("+_index+")").show();
+				$(".List ul li:gt("+_index+")").hide();
+				return false;
+			}
+		});
+	});
+</script>
+ </body>
+</html>

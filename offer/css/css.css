@@ -1,0 +1,199 @@
+*{margin:0; padding:0;}
+body{
+	background:url("../images/bg.png") no-repeat fixed;
+	font-family: "黑体";
+}
+#Con{
+	width:900px;
+	margin:0 auto;
+}
+li{
+	list-style: none;
+}
+/*头像样式*/
+#Con #light{
+	width:120px;
+	height:150px;
+	margin-left:200px;
+	overflow:hidden;
+	position:relative;
+}
+#Con dl{
+	width:100px;
+	height:130px;
+	background-image: linear-gradient(to right, #5e1508, #270c03);
+	padding:10px;
+}
+#Con dl dt{
+	width:100px;
+	height:100px;
+	border-radius:50%;
+	box-shadow:0 0 10px #fff;
+}
+#Con dl dt img{
+	width:100%;
+	height:100%;
+	border-radius:50%;
+}
+#Con dl dd{
+	width:100px;
+	height:30px; 
+	font-size:12px;
+	text-align:center;
+	line-height:30px;
+	color:#fff;
+}
+#Con dl:before{
+	content: "";
+    position: absolute;
+    width:40px;
+    height: 300px;
+    top:0;
+    left: -80px;
+    overflow: hidden;
+    background-image: linear-gradient(to right,rgba(255,255,255,0.2) 0,rgba(255,255,255,0.8) 50%,rgba(255,255,255,0.2) 100%);
+	-webkit-animation:light 3s  linear infinite; 
+}
+
+/*List 样式*/
+#Con .List{
+	width:600px; 
+	margin-left:260px;
+	border-left:3px solid #6699ff;
+	padding-top:30px;
+}
+#biglist>li{
+	height:400px;
+	position:relative;
+	margin-bottom:30px;
+	-webkit-animation:sc 2s; 
+	display:none;
+}
+ #biglist>li .bq{
+	width:120px;
+	height:30px;
+	position:absolute; 
+	top:100px; left:-116px;
+}
+#biglist>li .bq font{
+	width:110px;
+	height:30px;
+	background:#000;
+	display:block;
+	float:left; 
+	font-size:12px;
+	color:#fff;
+	text-align:Center; 
+	line-height:30px;
+}
+
+#biglist>li .bq span{
+	width:6px;
+	height:6px; 
+	background:#99ff33; 
+	display:block;
+	border:2px solid #fff; 
+	position:absolute; 
+	right:0;
+	top:8px;
+	border-radius:10px;
+}
+/*ListCon css*/
+#biglist>li .ListCon{
+	height:400px;
+	background:rgba(0,255,200,0.3); 
+	border-radius:10px;  
+	margin-left:10px; 
+	box-shadow:0 0 10px #000;
+
+}
+#biglist>li .ListCon:before{
+	content:"";
+	display:table;
+}
+.smallList{
+	color: #fff;
+	overflow: hidden;
+	width:570px;
+	margin:50px auto;
+}
+.smallList>li{
+	float:left;
+	margin:10px 10px 10px 0;
+	width:275px;
+	font-size:18px;
+	font-family: "黑体";
+}
+.smallList>li>a{
+	color:#fff;
+}
+.ListCon .wish>li {
+	float:none;
+	margin-top:50px;
+	width:100%;
+}
+.ListCon .wish{
+	margin:0 auto;
+}
+.text{
+	line-height:5;
+	font-size:18px;
+}
+.stext{
+	line-height:2;
+}
+/*css3动画*/
+@-webkit-keyframes sc{
+	from{ -webkit-transform:rotate(220deg) scale(0.2);}
+	to{ -webkit-transform:rotate(0deg) scale(1);}
+}
+@-webkit-keyframes light{
+	from{ -webkit-transform: rotate(-25deg) translate(-80px)}
+	to{ -webkit-transform: rotate(-25deg) translate(500px)}
+}
+/*Canvas*/
+#canvas{
+	position:absolute;
+	top:0;
+	left:0;
+	z-index:-1;
+	background:rgba(0,255,200,0.3);
+	display:block;
+	margin-left:10px;
+	border-radius:10px;
+	opacity: .4;
+}
+#skill svg{
+	border-radius:5px;
+}
+.ListCon>p{
+	color: #fff;
+	overflow: hidden;
+	width:570px;
+	margin:50px auto;
+}
+
+#logo{width:227px;height:76px;margin:30px auto 0;}
+#pic{
+	width:100%;
+	height:300px;
+	margin:120px auto 0;/*上下  左右居中*/
+	transform-style:preserve-3D;/*转换为3D*/
+	perspective:800px;/*景深*/
+	position:relative;/*参照物 相对定位*/
+}
+#pic img{
+	position:absolute;/*确定谁的位置 绝对定位*/
+	left:-10000px;  /*消除闪屏*/
+	-webkit-box-reflect:below 0	-webkit-linear-gradient(top,rgba(0,0,0,0.1),rgba(0,0,0,0.5));/*倒影制作*/
+	transition:0.6s;
+}
+#pic img.fron{
+	transform:rotateY(45deg) translateZ(-100px);
+}
+#pic img.now{
+	transform:translateZ(100px);
+}
+#pic img.back{
+	transform:rotateY(-45deg) translateZ(-100px);
+}
