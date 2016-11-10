@@ -1,6 +1,7 @@
 *{margin:0; padding:0;}
 body{
 	background:url("../images/bg.jpg") no-repeat fixed;
+	background-size: cover;
 	font-family: "黑体";
 }
 #Con{
@@ -196,4 +197,10 @@ li{
 }
 #pic img.back{
 	transform:rotateY(-45deg) translateZ(-100px);
+}
+.project{
+	margin:5px;
+	color:#fff;
+	font-size:18px;
+	line-height: 1.5em;
 }
