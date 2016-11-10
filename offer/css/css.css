@@ -1,7 +1,7 @@
 *{margin:0; padding:0;}
+
 body{
-	background:url("../images/bg.jpg") no-repeat fixed;
-	background-size: cover;
+	background: #5dc4c1;
 	font-family: "黑体";
 }
 #Con{
